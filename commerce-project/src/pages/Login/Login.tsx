@@ -4,10 +4,9 @@ const Login: React.FC = () => {
   return (
     <div
       className="flex items-center justify-center min-h-screen bg-cover bg-center px-4"
-      style={{ backgroundImage: 'url(/src/assets/dj-image.png)' }} // Substitua pelo caminho correto da sua imagem de fundo
+      style={{ backgroundImage: 'url(/src/assets/dj-image.png)' }} 
     >
       <div className="bg-black bg-opacity-50 p-8 rounded-lg max-w-md w-full">
-        {/* Título e subtítulo */}
         <h1 className="text-3xl font-bold text-white text-center mb-2">Audio</h1>
         <p className="text-white text-center text-sm mb-6">
           It&apos;s modular and designed to last
@@ -44,7 +43,6 @@ const Login: React.FC = () => {
           </button>
         </form>
 
-        {/* Botão de login com Google */}
         <div className="my-6">
           <button
             type="button"
