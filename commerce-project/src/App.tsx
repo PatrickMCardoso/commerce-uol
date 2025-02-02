@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 
 const PrivateRoute: React.FC<{ element: React.ReactNode }> = ({ element }) => {
   const { user } = useAuth();
-  return user ? <>{element}</> : <Navigate to="/" />;
+  return user ? <>{element}</> : <Navigate to="/login" />;
 };
 
 const App: React.FC = () => {
@@ -14,7 +14,8 @@ const App: React.FC = () => {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/home" element={<PrivateRoute element={<Home />} />} />
           <Route path="/dashboard" element={<Navigate to="/home" />} />
         </Routes>
