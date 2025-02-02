@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
+import Search from "./pages/Search/Search";
 
 const PrivateRoute: React.FC<{ element: React.ReactNode }> = ({ element }) => {
   const { user } = useAuth();
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<PrivateRoute element={<Home />} />} />
           <Route path="/dashboard" element={<Navigate to="/home" />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </Router>
     </AuthProvider>
