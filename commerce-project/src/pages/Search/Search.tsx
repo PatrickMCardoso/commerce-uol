@@ -4,7 +4,7 @@ import axios from "axios";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import shoppingCartIcon from "../../assets/shopping-cart.png";
 import searchIcon from "../../assets/search.png";
-import headphoneImage from "../../assets/headphone-image.png";
+import headphoneImage from "../../assets/headphone-image.png"; // Importe a imagem do headphone
 
 interface Review {
   userId: string;
@@ -96,12 +96,9 @@ const Search: React.FC = () => {
               onClick={() => navigate(`/details/${product.id}`)}
             >
               <img
-                src={product.img || headphoneImage} 
+                src={headphoneImage} 
                 alt={product.name}
                 className="w-14 h-14 rounded-md"
-                onError={(e) => {
-                    e.currentTarget.src = headphoneImage; // Imagem alternativa caso a original falhe
-                }}
               />
               <div className="flex-1">
                 <h3 className="text-sm font-semibold">{product.name}</h3>                
@@ -135,7 +132,7 @@ const Search: React.FC = () => {
                 onClick={() => navigate(`/details/${product.id}`)}
               >
                 <img
-                  src={product.img}
+                  src={headphoneImage} // Use a imagem do headphone
                   alt={product.name}
                   className="w-14 h-14 rounded-md"
                 />
