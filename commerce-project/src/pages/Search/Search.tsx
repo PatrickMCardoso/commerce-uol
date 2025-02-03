@@ -4,7 +4,7 @@ import axios from "axios";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import shoppingCartIcon from "../../assets/shopping-cart.png";
 import searchIcon from "../../assets/search.png";
-import headphoneImage from "../../assets/headphone-image.png"; // Importe a imagem do headphone
+import headphoneImage from "../../assets/headphone-image.png"; 
 
 interface Review {
   userId: string;
@@ -69,7 +69,6 @@ const Search: React.FC = () => {
         /> 
       </div>
 
-      {/* Campo de Busca */}
       <div className="relative mb-6">
         <input
           type="text"
@@ -93,7 +92,7 @@ const Search: React.FC = () => {
             <div
               key={product.id}
               className="flex items-center gap-4 p-3 border rounded-md shadow-sm cursor-pointer"
-              onClick={() => navigate(`/details/${product.id}`)}
+              onClick={() => navigate(`/product-details/${product.id}`)}
             >
               <img
                 src={headphoneImage} 
@@ -113,12 +112,12 @@ const Search: React.FC = () => {
             </div>
           ))
         ) : (
-          // Espaço reservado para não mover o "Popular Product"
+        
           <div className="flex-1"></div>
         )}
       </div>
 
-      {/* Popular Products (Sempre fixo no final) */}
+      {/* Popular Products */}
       <div className="sticky bottom-0 bg-white pb-4">
         <h2 className="text-md font-semibold mb-3 mt-4">Popular product</h2>
         <div className="space-y-4">
@@ -129,10 +128,10 @@ const Search: React.FC = () => {
               <div
                 key={product.id}
                 className="flex items-center gap-4 p-3 border rounded-md shadow-sm cursor-pointer"
-                onClick={() => navigate(`/details/${product.id}`)}
+                onClick={() => navigate(`/product-details/${product.id}`)}
               >
                 <img
-                  src={headphoneImage} // Use a imagem do headphone
+                  src={headphoneImage} 
                   alt={product.name}
                   className="w-14 h-14 rounded-md"
                 />

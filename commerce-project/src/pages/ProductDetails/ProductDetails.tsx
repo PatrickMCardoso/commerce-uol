@@ -5,6 +5,7 @@ import { Carousel } from "../../components/ui/carousel";
 import { ChevronLeftIcon } from "@heroicons/react/24/solid";
 import { FiShoppingCart } from "react-icons/fi";
 import headphoneImage from "../../assets/headphone-image.png";
+import headphoneImage2 from "../../assets/headphone-image2.png";
 import defaultAvatar from "../../assets/default-avatar.png";
 
 interface Product {
@@ -115,7 +116,7 @@ const ProductDetails: React.FC = () => {
 
       {activeTab === "overview" ? (
         <>
-          <img src={headphoneImage} alt={product.name} className="w-full h-64 object-contain" />
+          <img src={headphoneImage2} alt={product.name} className="w-full h-64 object-contain" />
 
           <h2 className="text-xl font-semibold mt-6 mb-5">Reviews ({reviews.length})</h2>
           {reviews.length > 0 ? (
@@ -171,9 +172,7 @@ const ProductDetails: React.FC = () => {
         </>
       )}
 
-      <button 
-        className="w-full bg-green-500 text-white text-lg font-bold py-3 rounded-md mt-6"
-      >
+      <button className="sticky bottom-0 w-full bg-green-500 text-white text-lg font-bold py-3 rounded-md mt-6">
         Add To Cart
       </button>
 
