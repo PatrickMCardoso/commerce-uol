@@ -27,7 +27,7 @@ const Home: React.FC = () => {
 
         <img src={defaultAvatar} alt="User" className="w-8 h-8 rounded-full" />
       </header>
-      <h2 className="text-lg text-gray-500 mt-6">Hi, Andrea</h2>
+      <h2 className="text-lg text-gray-500 mt-6">Hi, Patrick</h2>
       <p className="text-3xl font-bold text-gray-700 mb-7">What are you looking for today?</p>
 
       <div className="relative mt-2 w-full mb-12">
