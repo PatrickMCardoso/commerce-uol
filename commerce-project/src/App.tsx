@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
 import Search from "./pages/Search/Search";
 import ExploreProducts from "./pages/ExploreProducts/ExploreProducts";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import FilterScreen from "./pages/FilterScreen/FilterScreen";
 
 const PrivateRoute: React.FC<{ element: React.ReactNode }> = ({ element }) => {
@@ -29,7 +30,13 @@ const App: React.FC = () => {
             path="/explore-products" 
             element={<ExploreProducts filter={filter} onOpenFilter={() => setIsFilterOpen(true)} />} 
           />
+          <Route 
+            path="/product-details/:id" 
+            element={<PrivateRoute element={<ProductDetails />} />} 
+          />
         </Routes>
+
+        {/* Modal de Filtros */}
         {isFilterOpen && <FilterScreen setFilter={setFilter} onClose={() => setIsFilterOpen(false)} />}
       </Router>
     </AuthProvider>

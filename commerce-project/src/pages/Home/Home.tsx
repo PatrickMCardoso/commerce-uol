@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           <h3 className="text-xl font-bold">TMA-2 Modular Headphone</h3>
           <button 
             className="text-[#0ACF83] flex items-center gap-1 mt-4 transition-colors hover:text-[#08b76f]"
-            onClick={() => navigate("/product-detail")}
+            onClick={() => navigate("/product-details/1")}
           >
             Shop now <span>→</span>
           </button>
